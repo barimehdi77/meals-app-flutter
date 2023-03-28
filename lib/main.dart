@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 
-
 import './screens/categories.screen.dart';
+
 void main() => runApp(MyApp());
 
 class MyApp extends StatelessWidget {
@@ -10,8 +10,33 @@ class MyApp extends StatelessWidget {
     return MaterialApp(
       title: 'DeliMeals',
       theme: ThemeData(
-        primarySwatch: Colors.blue,
-      ),
+          primarySwatch: Colors.blue,
+          colorScheme: ColorScheme(
+            brightness: Brightness.light,
+            primary: Colors.blue,
+            onPrimary: Colors.white,
+            secondary: Colors.amber,
+            onSecondary: Colors.black,
+            error: Colors.red,
+            onError: Colors.white,
+            background: Colors.white,
+            onBackground: Colors.black,
+            surface: Colors.amber,
+            onSurface: Colors.white,
+          ),
+          canvasColor: Color.fromRGBO(255, 254, 229, 1),
+          fontFamily: 'Raleway',
+          textTheme: ThemeData.light().textTheme.copyWith(
+              bodyLarge: TextStyle(
+                color: Color.fromRGBO(20, 51, 51, 1),
+              ),
+              bodyMedium: TextStyle(
+                color: Color.fromRGBO(20, 51, 51, 1),
+              ),
+              titleLarge: TextStyle(
+                fontSize: 24,
+                fontFamily: 'RobotoCondensed',
+              ))),
       home: CategoriesScreen(),
     );
   }
